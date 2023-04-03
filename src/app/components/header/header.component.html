@@ -1,0 +1,10 @@
+
+<header>
+  <div>
+    <img class="logo" src="./../../../assets/logo.svg" alt="ennovaflix logo" />
+    <div *ngIf="isUserLogged">
+      <button *ngFor="let item of links">{{ item }}</button>
+    </div>
+    <img class="userLogo" src="./../../../assets/{{ isUserLogged.urlImage }}" alt="user logo" />
+  </div>
+</header>
