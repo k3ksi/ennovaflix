@@ -9,6 +9,7 @@ header div{
   height: 5rem;
   width: 10rem;
   padding: 0.5rem;
+  background-color: black;
 }
 .userLogo{
   height: 5rem;
@@ -20,4 +21,7 @@ button{
   border: none;
   color: white;
   cursor: pointer;
+}
+.onlyLogo{
+  background-color: black;
 }

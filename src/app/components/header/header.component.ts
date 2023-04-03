@@ -1,15 +1,20 @@
 import { Component, Input } from '@angular/core';
-
+type User = {
+  nickname:string,
+  email:string,
+  urlImage:string
+}
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent {
-@Input() isUserLogged = {
-  nickname: 'User',
-  email: 'testuser@ennovaflix.com',
-  urlImage: 'avatar1.svg'
-}
+@Input() isUserLogged:User | null = {
+  nickname: 'Paolo',
+  email: 'paolocannone@pino.it',
+  urlImage: 'avatar2.svg'
+};
 links = ['Film', 'Serie TV', 'Preferiti', 'Cerca']
 }

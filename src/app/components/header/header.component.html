@@ -1,10 +1,15 @@
 
-<header>
+<header *ngIf="isUserLogged; else onlyLogo">
   <div>
     <img class="logo" src="./../../../assets/logo.svg" alt="ennovaflix logo" />
-    <div *ngIf="isUserLogged">
+    <div >
       <button *ngFor="let item of links">{{ item }}</button>
     </div>
     <img class="userLogo" src="./../../../assets/{{ isUserLogged.urlImage }}" alt="user logo" />
   </div>
 </header>
+<ng-template #onlyLogo>
+  <div class="onlyLogo">
+    <img class="logo" src="./../../../assets/logo.svg" alt="ennovaflix logo" />
+  </div>
+</ng-template>
