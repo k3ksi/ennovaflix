@@ -2,15 +2,11 @@
 <div>
   <div #swiperContainer class="swiper-container" >
     <!-- Additional required wrapper -->
-    <div class="swiper-wrapper" *ngFor="let video of SliderDati">
+    <div class="swiper-wrapper">
        <!-- Slides -->
-      <div class="swiper-slide" ><img [src]="video.urlImage" alt="immagine di anteprima del video" /></div>
-      <div class="swiper-slide" ><img [src]="video.urlImage" alt="immagine di anteprima del video" /></div>
+      <div class="swiper-slide" *ngFor="let video of SliderDati" ><img [src]="video.urlImage" alt="immagine di anteprima del video" /></div>
     </div>
     <!-- If we need pagination -->
     <!-- <div class="swiper-pagination"></div>   -->
   </div>
 </div>
-
-
-<!-- le img sono 2 ma solo 1 volta esegue il for da verificare perche  -->

@@ -1,13 +1,18 @@
 .swiper-container {
   background-color: white;
-  left: 0 ;
-  right: 0 ;
-  overflow:scroll;
-  height: 15rem;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  // height: 15rem;
   width: 100vw;
-  position:relative;
-  display:flex;
+  position: relative;
+  display: flex;
 }
 
-
-
+.swiper-slide,
+.swiper-slide>img {
+  aspect-ratio: 10 / 9;
+  object-fit: contain;
+  object-position: left right;
+  // width: 350px !important;
+}

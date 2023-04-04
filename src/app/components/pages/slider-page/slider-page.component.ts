@@ -8,13 +8,13 @@ import { VideoService } from 'src/app/services/video/video.service';
   styleUrls: ['./slider-page.component.scss']
 })
 export class SliderPageComponent implements OnInit{
-  ngOnInit(): void {
-    this.jsonData();
-  }
+
   private videoService = inject(VideoService);
   SliderDati!: IResponseVideo[]
 
-
+ ngOnInit(): void {
+    this.jsonData();
+  }
   jsonData() {
     this.SliderDati = this.videoService.getVideos();
   }

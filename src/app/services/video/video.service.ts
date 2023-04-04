@@ -28,6 +28,95 @@ export class VideoService {
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
       "isSerie": false
     },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+    {
+      "id": 1,
+      "titolo": "titolo",
+      "annoDiUscita": 2019,
+      "ratingMedio": 244.20,
+      "genere": "genere",
+      "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
+      "tipologia": "asdasd",
+      "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
+      "isSerie": false
+    },
+
   ];
   constructor() { }
 
