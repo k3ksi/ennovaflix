@@ -8,7 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { SliderComponent } from './components/slider/slider.component';
-import { SliderPageComponent } from './components/pages/slider-page/slider-page.component';
+import { HomepageComponent } from './components/pages/homepage/homepage.component';
+import { FilmComponent } from './components/pages/film/film.component';
+import { SerieTvComponent } from './components/pages/serie-tv/serie-tv.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SliderPageComponent } from './components/pages/slider-page/slider-page.
     FooterComponent,
     LoginComponent,
     SliderComponent,
-    SliderPageComponent
+    HomepageComponent,
+    FilmComponent,
+    SerieTvComponent
   ],
   imports: [
     BrowserModule,

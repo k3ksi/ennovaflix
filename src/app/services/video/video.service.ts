@@ -29,7 +29,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 2,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -40,7 +40,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 3,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -51,7 +51,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 4,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -62,7 +62,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 5,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -73,7 +73,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 6,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -84,7 +84,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 7,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -95,7 +95,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 8,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -106,7 +106,7 @@ export class VideoService {
       "isSerie": false
     },
     {
-      "id": 1,
+      "id": 9,
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
@@ -121,8 +121,11 @@ export class VideoService {
   constructor() { }
 
 
-  getVideos(): IResponseVideo[] {
-    console.log(this.dataTest)
+  getFilmsVideos(): IResponseVideo[] {
+    return this.dataTest;
+  }
+
+  getSeriesTVVideos(): IResponseVideo[] {
     return this.dataTest;
   }
 
