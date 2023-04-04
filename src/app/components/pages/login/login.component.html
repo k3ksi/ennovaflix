@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 <form action="">
   <label for="email">Email</label>
   <input type="email" />
   <label for="password">Password</label>
   <input type="password" />
   <button class="button-5">Log In</button>
+=======
+
+<form *ngIf="!loggedUser();else homepage" (submit)="$event.preventDefault()" [formGroup]="model">
+  <label for="username">UserName: </label>
+  <input id="username" type="text" formControlName="username" autocomplete="email"/>
+  <label for="password">Password: </label>
+  <input id="password" type="password" formControlName="password" />
+  <app-button [link]="'/'" [text]="'Log In'" (click)="login()"></app-button>
+>>>>>>> dafe66103477de89789d7b310553c63d716aa086
 </form>
+<ng-template #homepage>
+  <div style="color:white">richiamo componente homepage   {{loggedUser()?.username}}</div>
+</ng-template>
