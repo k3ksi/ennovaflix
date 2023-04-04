@@ -6,7 +6,13 @@ import { VideoPageComponent } from './components/pages/video-page/video-page.com
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'film', component: VideoPageComponent },
+  { path: 'film', children:[{
+    path: ':slug',
+    component: VideoPageComponent
+  }
+
+
+  ] },
   { path: '**', component: NotfoundPageComponent },
 ];
 

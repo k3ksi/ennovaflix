@@ -18,15 +18,20 @@ video{
 .recensioni h3{
   text-align: center;
 }
+
 .recensioni div{
   border: 1px solid white;
   border-radius: 5px 5px;
   text-align: center;
   margin : 0.5rem;
 }
-.add{
-  margin-left : 45%;
+.recensioni .addButton{
+  border: none;
 }
+.add{
+  margin: 0 auto;
+}
+
 form{
   display: flex;
   flex-direction: column;
@@ -34,6 +39,7 @@ form{
 form textarea{
   margin: 1rem;
 }
+
 .recensioni,.stars{
   animation-name: fadeIn;
   animation-duration: 1s;

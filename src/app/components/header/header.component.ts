@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { AuthService } from '../service/auth.service';
 type User = {
   nickname:string,
   email:string,
@@ -11,10 +12,12 @@ type User = {
 })
 
 export class HeaderComponent {
-@Input() isUserLogged:User | null ={
-  nickname: 'Paolo',
-  email: 'paolocannone@pino.it',
-  urlImage: 'avatar1.svg'
-};
+  auth = inject(AuthService);
+loggedUser(){
+  return this.auth.user$.getValue();
+}
+logoutUser(){
+  return this.auth.logout();
+}
 links = ['Film', 'Serie TV', 'Preferiti', 'Cerca']
 }

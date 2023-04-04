@@ -47,13 +47,15 @@ export class VideoPageComponent {
   puntate :number[] = []
   ratingValue=0
   onSelect(val:number){
-    this.puntate=[];
-    this.details.stagioni.map((item) => {
-      if(item.numero_stagione === val){
-        for(let i = 1; i <= item.numero_puntate; i++){
-          this.puntate.push(i)
-        }
-      }
-    })
+    this.puntate = [];
+    const index = this.details.stagioni.findIndex((item)=> item.numero_stagione=val)
+    const found = this.details.stagioni[index];
+    if(found){
+      this.puntate = this.generateArray(found.numero_puntate);
+    }
+
+  }
+  generateArray(size:number) {
+    return Array.from({length: size}, (_, index) => index + 1);
   }
 }

@@ -1,11 +1,11 @@
 <div class="container">
   <div class="video-page">
     <video controls>
-      <source src="./../../../../assets/movie.mp4" type="video/mp4" />
+      <source src="assets/movie.mp4" type="video/mp4" />
     </video>
     <div class="details">
       <h3>{{ details.titolo }} - {{ details.anno }}</h3>
-      <span>{{ details.rating }} ★</span>
+      <span>{{ details.rating }} ★</span><app-button [text]="'Aggiungi ai preferiti'"></app-button>
       <hr />
       <div *ngIf="details.isSerie">
         <select (change)="onSelect(+val.value)" #val>
@@ -30,7 +30,10 @@
 
   <div *ngIf="write === false; else aggiungiRecensione" class="recensioni">
     <h3>Recensioni</h3>
-    <app-button (click)="write = true" class="add" [text]="'+'"></app-button>
+    <div class="addButton">
+      <app-button (click)="write = true" class="add" [text]="'+'"></app-button>
+    </div>
+
     <div *ngFor="let item of details.recensioni">
       <h4>{{ item.nickname }} - {{ item.rating }}★</h4>
       <p>{{ item.descrizione }}</p>

@@ -1,15 +1,15 @@
 
-<header *ngIf="isUserLogged; else onlyLogo">
+<header *ngIf="loggedUser() as user; else onlyLogo">
   <div>
-    <img class="logo" src="./../../../assets/logo.svg" alt="ennovaflix logo" />
+    <img class="logo" src="assets/logo.svg" alt="ennovaflix logo" />
     <div >
-      <button *ngFor="let item of links">{{ item }}</button>
+      <button *ngFor="let item of links" routerLink="{{item.toLowerCase()}}">{{ item }}</button>
     </div>
-    <img class="userLogo" src="./../../../assets/{{ isUserLogged.urlImage }}" alt="user logo" />
+    <a (click)="logoutUser()" routerLink="/"><img class="userLogo" src="assets/{{user.urlImage}}" alt="user logo" /></a>
   </div>
 </header>
 <ng-template #onlyLogo>
   <div class="onlyLogo">
-    <img class="logo" src="./../../../assets/logo.svg" alt="ennovaflix logo" />
+    <img class="logo" src="assets/logo.svg" alt="ennovaflix logo" />
   </div>
 </ng-template>
