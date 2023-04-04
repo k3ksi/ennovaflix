@@ -9,7 +9,7 @@
       <div><img class="userLogo" src="assets/{{user.urlImage}}" alt="user logo" />▼</div>
       <div class="menu" *ngIf="modal">
         <a routerLink="/profile">Profilo</a>
-        <a (click)="logoutUser()">Logout</a>
+        <a (click)="logoutUser()" routerLink="/">Logout</a>
       </div>
     </a>
   </div>
