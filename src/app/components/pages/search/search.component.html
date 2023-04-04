@@ -1,7 +1,11 @@
 <div class="search-container">
-  <form>
-    <input type="text" placeholder="Cerca per titolo o genere">
-    <app-button [text]="'Cerca'"></app-button>
+  <form [formGroup]="model">
+    <input id="searchValue"  formControlName="searchValue" type="text" placeholder="Cerca per titolo o genere">
+    <app-button [text]="'Cerca'" (click)="search()"></app-button>
   </form>
-
+  <ul *ngIf="results;" class="results">
+      <li *ngFor="let item of results.value">
+        <a routerLink="{{item.url}}"> <img src="/assets/{{item.urlImage}}" alt="{{item.title}}"> </a>
+      </li>
+  </ul>
 </div>
