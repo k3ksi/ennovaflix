@@ -1,1 +1,3 @@
-<button class="button-5" routerLink="{{link}}">{{text}}</button>
+
+<button *ngIf="link" class="button-5" routerLink="{{link}}"></button>
+<button *ngIf="!link" class="button-5">{{text}}</button>
