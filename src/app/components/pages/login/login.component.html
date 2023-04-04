@@ -1,4 +1,5 @@
 
+<div class="container">
 <form *ngIf="!loggedUser();else homepage" (submit)="$event.preventDefault()" [formGroup]="model">
   <label for="username">UserName: </label>
   <input id="username" type="text" formControlName="username" autocomplete="email"/>
@@ -9,3 +10,4 @@
 <ng-template #homepage>
   <div style="color:white">richiamo componente homepage   {{loggedUser()?.username}}</div>
 </ng-template>
+</div>
