@@ -5,7 +5,13 @@
     <div >
       <button *ngFor="let item of links" routerLink="{{item.toLowerCase()}}">{{ item }}</button>
     </div>
-    <a (click)="logoutUser()" routerLink="/"><img class="userLogo" src="assets/{{user.urlImage}}" alt="user logo" /></a>
+    <a (click)="modal = !modal">
+      <div><img class="userLogo" src="assets/{{user.urlImage}}" alt="user logo" />▼</div>
+      <div class="menu" *ngIf="modal">
+        <a routerLink="/profile">Profilo</a>
+        <a (click)="logoutUser()">Logout</a>
+      </div>
+    </a>
   </div>
 </header>
 <ng-template #onlyLogo>
