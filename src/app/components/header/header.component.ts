@@ -20,5 +20,5 @@ logoutUser(){
   return this.auth.logout();
 }
 modal: boolean = false
-links = ['Film', 'Serie TV', 'Preferiti', 'Cerca']
+links = ['Home','Film', 'Serie TV', 'Preferiti', 'Cerca']
 }

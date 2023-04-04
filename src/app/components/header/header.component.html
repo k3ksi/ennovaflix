@@ -3,7 +3,7 @@
   <div>
     <img class="logo" src="assets/logo.svg" alt="ennovaflix logo" />
     <div >
-      <button *ngFor="let item of links" routerLink="{{item.toLowerCase()}}">{{ item }}</button>
+      <button *ngFor="let item of links" routerLink="{{item.toLowerCase().replaceAll(' ','')}}">{{ item }}</button>
     </div>
     <a (click)="modal = !modal">
       <div><img class="userLogo" src="assets/{{user.urlImage}}" alt="user logo" />▼</div>
