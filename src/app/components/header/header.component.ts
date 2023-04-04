@@ -11,10 +11,10 @@ type User = {
 })
 
 export class HeaderComponent {
-@Input() isUserLogged:User | null = {
+@Input() isUserLogged:User | null ={
   nickname: 'Paolo',
   email: 'paolocannone@pino.it',
-  urlImage: 'avatar2.svg'
+  urlImage: 'avatar1.svg'
 };
 links = ['Film', 'Serie TV', 'Preferiti', 'Cerca']
 }
