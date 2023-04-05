@@ -1,0 +1,20 @@
+form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .immagine_profilo {
+    /*margin: 0;*/
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    border-radius: 20 px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .NickName {
+    margin-bottom: 40px;
+  }
+}
