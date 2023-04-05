@@ -12,11 +12,11 @@ export class AuthService {
   user$ = new BehaviorSubject<User | null>(null);
   registerUser(user :User){
     if(!this.searchUser(user.username).username){
-      localStorage.setItem('user-'+user.username, JSON.stringify(user));
+      localStorage.setItem('user', JSON.stringify(user));
     }
   }
-  searchUser(username : User['username']){
-    return JSON.parse(localStorage.getItem('user-'+username) ?? '{}')
+  searchUser(username : User['username']|null){
+    return JSON.parse(localStorage.getItem('user') ?? '{}')
   }
   loginUser(user :User){
     const userFound:User = this.searchUser(user.username)
@@ -30,10 +30,10 @@ export class AuthService {
   }
   logout(){
     this.user$.next(null);
-    localStorage.removeItem('user-test@ennovaflix.com');
+    localStorage.removeItem('user');
   }
   constructor() {
-    const getItem = localStorage.getItem('user-test@ennovaflix.com');
+    const getItem = localStorage.getItem('user');
 
     if(getItem){
       const currentUser = JSON.parse(getItem);

@@ -1,5 +1,6 @@
 import { Component, Input, inject } from '@angular/core';
-import { AuthService } from '../service/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
+
 type User = {
   nickname:string,
   email:string,
