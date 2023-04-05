@@ -8,46 +8,57 @@ import jakarta.persistence.Id;
 @Entity
 public class Utente {
 	@Id // la chiave primaria
-	private Integer Id;
-	private String NickName;
-	private String Email;
-	private String Password;
-	private String Immagine;
+	private Integer id;
+	private String nickname;
+	private String email;
+	private String password;
+	private String immagine;
+	private String notifiche;
 	
-	@GeneratedValue(strategy=GenerationType.IDENTITY)// controllo di corretezza
+@GeneratedValue(strategy=GenerationType.IDENTITY) // controllo di corretezza
 	
-	//@Temporal (TemporalType.DATE) // i dati temporali
-	
+		//@Temporal (TemporalType.DATE) // i dati temporali
+
+
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
-	public String getNickName() {
-		return NickName;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setNickName(String nickName) {
-		NickName = nickName;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 	public String getImmagine() {
-		return Immagine;
+		return immagine;
 	}
 	public void setImmagine(String immagine) {
-		Immagine = immagine;
+		this.immagine = immagine;
 	}
+	public String getNotifiche() {
+		return notifiche;
+	}
+	public void setNotifiche(String notifiche) {
+		this.notifiche = notifiche;
+	}
+	
+
+
 	
 	
 }

@@ -6,52 +6,56 @@ import jakarta.persistence.Id;
 @Entity
 public class Catalogo {
 	@Id
-	private Integer Id;
-	private String Titolo;
-	private Integer Id_Tipologia;
-	private String Descrizione;
-	private String Locandina;
-	private Double Media_Recensioni;
-	private Boolean Is_Serie;
+	private Integer id;
+	private String titolo;
+	private Integer id_tipologia;
+	private String descrizione;
+	private String locandina;
+	private String anno_uscita;
+	private String data_inserimento;
 	
-	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getTitolo() {
-		return Titolo;
+		return titolo;
 	}
 	public void setTitolo(String titolo) {
-		Titolo = titolo;
+		this.titolo = titolo;
+	}
+	public Integer getId_tipologia() {
+		return id_tipologia;
+	}
+	public void setId_tipologia(Integer id_tipologia) {
+		this.id_tipologia = id_tipologia;
 	}
 	public String getDescrizione() {
-		return Descrizione;
+		return descrizione;
 	}
 	public void setDescrizione(String descrizione) {
-		Descrizione = descrizione;
+		this.descrizione = descrizione;
 	}
 	public String getLocandina() {
-		return Locandina;
+		return locandina;
 	}
 	public void setLocandina(String locandina) {
-		Locandina = locandina;
+		this.locandina = locandina;
 	}
-	public Double getMedia_Recensioni() {
-		return Media_Recensioni;
+	public String getAnno_uscita() {
+		return anno_uscita;
 	}
-	public void setMedia_Recensioni(Double media_Recensioni) {
-		Media_Recensioni = media_Recensioni;
+	public void setAnno_uscita(String anno_uscita) {
+		this.anno_uscita = anno_uscita;
 	}
-	public Boolean getIs_Serie() {
-		return Is_Serie;
+	public String getData_inserimento() {
+		return data_inserimento;
 	}
-	public void setIs_Serie(Boolean is_Serie) {
-		Is_Serie = is_Serie;
+	public void setData_inserimento(String data_inserimento) {
+		this.data_inserimento = data_inserimento;
 	}
-	public Integer getId() {
-		return Id;
-	}
-	public Integer getId_Tipologia() {
-		return Id_Tipologia;
-	}
-	
 	
 
 }
