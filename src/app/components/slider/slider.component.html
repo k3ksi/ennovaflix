@@ -1,0 +1,14 @@
+<!-- Slider main container -->
+<div #swiperContainer class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide" *ngFor="let video of SliderDati">
+      <a [routerLink]="'/serie/' + video.id" style="display: block">
+        <img [src]="video.urlImage" alt="immagine di anteprima del video" />
+      </a>
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <!-- <div class="swiper-pagination"></div>   -->
+</div>

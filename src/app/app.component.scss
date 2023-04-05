@@ -2,13 +2,16 @@
 
 .app {
   min-height: 100vh;
-  display: table;
   width: 100%;
- //display: grid;
- //grid-template-rows: auto 1fr auto;
 }
 .app div{
-  display: table-row;
-  height: 100%;
   background-color: black;
 }
+
+div.body{
+  // height:34rem;
+  height: 100vh;
+
+}
+
+

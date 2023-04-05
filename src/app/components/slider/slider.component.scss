@@ -1,0 +1,50 @@
+/* basic */
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-container,
+.swiper-wrapper {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  align-items: center;
+  cursor: grab;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.swiper-slide>a>img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+// div.body {
+  // display: block;
+  // height: 80vw;
+// }
