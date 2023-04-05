@@ -120,12 +120,33 @@ export class VideoService {
   ];
   constructor() { }
 
-
+  // video
   getFilmsVideos(): IResponseVideo[] {
     return this.dataTest;
   }
 
+  // series
   getSeriesTVVideos(): IResponseVideo[] {
+    return this.dataTest;
+  }
+
+  // preferiti video
+  getPreferitiFilmsVideos(): IResponseVideo[] {
+    return this.dataTest;
+  }
+
+  // preferiti serie
+  getPreferitiSeriesTVVideos(): IResponseVideo[] {
+    return this.dataTest;
+  }
+
+  // di tendenza
+  getDiTendenzaFilmsVideos(): IResponseVideo[] {
+    return this.dataTest;
+  }
+
+  // di tendenza
+  getDiTendenzaSeriesTVVideos(): IResponseVideo[] {
     return this.dataTest;
   }
 

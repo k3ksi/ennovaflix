@@ -7,15 +7,17 @@ import { HomepageComponent } from './components/pages/homepage/homepage.componen
 import { FilmComponent } from './components/pages/film/film.component';
 import { SerieTvComponent } from './components/pages/serie-tv/serie-tv.component';
 import { SearchComponent } from './components/pages/search/search.component';
+import { PrefiritiComponent } from './components/pages/prefiriti/prefiriti.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', redirectTo:'' },
   { path: 'homepage', component: HomepageComponent },
+  { path: 'home', redirectTo: 'homepage' },
   { path: 'film', component: FilmComponent },
-  { path: 'serie', component: SerieTvComponent },
+  { path: 'serietv', component: SerieTvComponent },
+  { path: 'preferiti', component: PrefiritiComponent },
   { path: '', component: LoginComponent},
-  { path: 'home', redirectTo: '' },
   { path: 'cerca', component: SearchComponent},
   { path: 'film', children:[{
     path: ':slug',
