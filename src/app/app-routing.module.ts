@@ -8,13 +8,11 @@ import { FilmComponent } from './components/pages/film/film.component';
 import { SerieTvComponent } from './components/pages/serie-tv/serie-tv.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
   { path: '', component: LoginComponent },
   { path: 'login', redirectTo:'' },
   { path: 'homepage', component: HomepageComponent },
-  { path: 'film', component: FilmComponent },
+  // { path: 'film', component: FilmComponent },
   { path: 'serie', component: SerieTvComponent },
-=======
   { path: '', component: LoginComponent},
   { path: 'home', redirectTo: '' },
   { path: 'film', children:[{
@@ -22,7 +20,6 @@ const routes: Routes = [
     component: VideoPageComponent
   }
   ] },
->>>>>>> dafe66103477de89789d7b310553c63d716aa086
   { path: '**', component: NotfoundPageComponent },
 ];
 
