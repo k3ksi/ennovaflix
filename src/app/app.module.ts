@@ -10,6 +10,7 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { ButtonComponent } from './components/button/button.component';
 import { VideoPageComponent } from './components/pages/video-page/video-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './components/pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     LoginComponent,
     ButtonComponent,
-    VideoPageComponent
+    VideoPageComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

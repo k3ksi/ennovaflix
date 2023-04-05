@@ -1,13 +1,14 @@
 
 
 .app {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  display: table;
+  width: 100%;
+ //display: grid;
+ //grid-template-rows: auto 1fr auto;
 }
 .app div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: table-row;
+  height: 100%;
   background-color: black;
 }
