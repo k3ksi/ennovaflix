@@ -163,6 +163,10 @@ export class VideoService {
     return this.generiFilms
   }
 
+   // ritorna un film in base all'id
+   getFilm(id:number): IResponseVideo[] {
+    return this.dataTest.filter((video) => video.id == id);
+  }
   // ritorna i film filtrati per genere
   getFilmsByGenere(options: { genere: string }): IResponseVideo[] {
     return this.dataTest.filter((video) => video.genere == options.genere);

@@ -1,7 +1,14 @@
 <ul class="results">
   <li *ngFor="let item of results.value">
-    <a [routerLink]="item.url">
-      <img [src]="item.urlImage" [alt]="'immagine di' + item.title" />
-    </a>
+    <div *ngIf="item.isSerie; else isFilm">
+      <a [routerLink]="'/serietv/' + item.id">
+        <img [src]="item.urlImage" [alt]="'immagine di' + item.title" />
+      </a>
+    </div>
+    <ng-template #isFilm>
+      <a [routerLink]="'/film/' + item.id">
+        <img [src]="item.urlImage" [alt]="'immagine di' + item.title" />
+      </a>
+    </ng-template>
   </li>
 </ul>

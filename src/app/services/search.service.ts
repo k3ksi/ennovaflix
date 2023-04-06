@@ -16,30 +16,6 @@ export type ContentArray = Array<ContentFound>;
 export class SearchService {
   contentFound$ = new BehaviorSubject<IResponseVideo | null>(null);
   results(searchValue: string)  {
-    // const mock: ContentArray = [
-    //   {
-    //     title: 'Il Gladiatore',
-    //     id: 10,
-    //     genre: ['Azione'],
-    //     isSeries: false,
-    //     urlImage: 'ilgladiatore.jpg',
-    //   },
-    //   {
-    //     title: 'Spongebob',
-    //     id: 10,
-    //     genre: ['Cartone Animato'],
-    //     isSeries: true,
-    //     urlImage: 'spongebob.jpg',
-    //   },
-    //   {
-    //     title: 'Titanic',
-    //     id: 15,
-    //     genre: ['Azione', 'Drammatico'],
-    //     isSeries: false,
-    //     urlImage: 'titanic.jpg',
-    //   },
-    // ];
-
     const mock: IResponseVideo[] = [
       {
         "id": 0,
@@ -50,7 +26,7 @@ export class SearchService {
         "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
         "tipologia": "asdasd",
         "urlImage": "https://www.tuttotech.net/wp-content/uploads/2020/04/Jason-Bourne-top10.jpg",
-        "isSerie": false
+        "isSerie": true
       },
       {
         "id": 1,
@@ -160,11 +136,6 @@ export class SearchService {
         item.titolo.toLocaleLowerCase().includes(searchValue.toLowerCase()) ||
         item.genere.includes(searchValue)
       ) {
-        // if (item.isSeries) {
-        //   item.url = '/serie/' + item.id;
-        // } else {
-        //   item.url = '/film/' + item.id;
-        // }
         returnMock.push(item);
       }
     });
