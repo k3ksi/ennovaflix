@@ -1,50 +1,36 @@
-/* basic */
-.swiper-container {
-  position: relative;
-  overflow: hidden;
-}
 
-.swiper-container,
-.swiper-wrapper {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  position: relative;
+.results {
   display: flex;
-  flex-shrink: 0;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  font-size: 18px;
-  align-items: center;
-  cursor: grab;
+  gap: 10px;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.results > li {
+  flex-basis: 350px; /*width: 350px;*/
+  position: relative;
+  cursor: pointer;
+}
+
+.results::after {
+  content: "";
+  flex-basis: 350px;
+}
+
+.results li img {
   object-fit: cover;
-  object-position: top;
+  max-width: 100%;
+  height: 14rem;
+  width: 22rem;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+.results li img:hover{
+  border: 0.5rem solid white;
 }
 
-.swiper-slide>a>img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: 50% 50%;
+/* hover */
+.results li:hover .overlay {
+  transform: scale(1);
 }
 
-:host {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-}
-
-// div.body {
-  // display: block;
-  // height: 80vw;
-// }

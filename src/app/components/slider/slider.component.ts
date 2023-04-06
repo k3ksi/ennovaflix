@@ -11,16 +11,13 @@ import Swiper, { SwiperPluginPagination } from 'tiny-swiper';
 export class SliderComponent implements OnInit, AfterViewInit {
 
 
-  @ViewChild('swiperContainer') swiperContainer!: ElementRef<HTMLElement>;
   @Input() SliderDati!: IResponseVideo[]
+  @Input() isFilmOrSerieTV! : string
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit(): void {
-    const swiperContainerElement = this.swiperContainer.nativeElement
-    // slidesPerView : 3.5 e a 3.5 cois si vede quella immagine a meta che ci fa capire che e uno slider
-    const swiper = new Swiper(swiperContainerElement, { direction: 'horizontal', spaceBetween: 50, slidesPerView: 3.5 });
 
   }
 

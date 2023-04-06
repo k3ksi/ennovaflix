@@ -13,12 +13,14 @@ export class FilmComponent {
   private videoService = inject(VideoService);
   SliderDati!: IResponseVideo[]
   SliderDati2!: IResponseVideo[]
-  generi! : string[]
+  generi!: string[]
+  isFilter : boolean = false;
+  isFilm = "film"
 
   ngOnInit(): void {
     this.jsonFilmData();
     this.jsonSeriesTvData();
-    this.getGeneri();
+    this.GetFilmGeneri();
   }
   jsonFilmData() {
     this.SliderDati = this.videoService.getFilmsVideos();
@@ -29,16 +31,23 @@ export class FilmComponent {
     console.log("this.SliderDati2: ", this.SliderDati2)
   }
 
-  getGeneri(){
-   this.generi= this.videoService.getGeneri();
-  }
-
-  OnClickGenere(genere:string ) : void {
-    console.log('genere' , genere)
+  GetFilmGeneri(){
+    this.generi =  this.videoService.getFilmsGeneri();
 
   }
 
-  GetFilbyGenere(genere:string){
+  GetFilmbyGenere(genere: string) {
+    console.log(' GetFilmbyGenere genere:', genere)
+    this.isFilter = true;
+    const options = { genere: genere };
+    this.SliderDati = this.videoService.getFilmsByGenere(options);
+
+  }
+
+
+
+
+  GetSerieTvbyGenere(genere: string) {
     console.log('genere:', genere)
     // da fare nuova query
   }
