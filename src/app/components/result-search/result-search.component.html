@@ -1,0 +1,8 @@
+<p>result-search works!</p>
+<ul class="results">
+  <li *ngFor="let item of results.value">
+    <a routerLink="{{ item.url }}">
+      <img src="/assets/img/{{ item.urlImage }}" alt=" immagine di {{ item.title }}" />
+    </a>
+  </li>
+</ul>

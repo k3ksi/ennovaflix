@@ -21,10 +21,11 @@ export class SerieTvComponent {
 
   jsonSeriesTvData() {
     this.SliderDati2 = this.videoService.getSeriesTVVideos();
-    console.log("this.SliderDati2: " , this.SliderDati2)
+    console.log("this.jsonSeriesTvData: " , this.SliderDati2)
   }
 
   jsonDiTendenzaSerieData() {
     this.SliderDati2 = this.videoService.getDiTendenzaSeriesTVVideos();
+    console.log("this.jsonDiTendenzaSerieData: " , this.SliderDati2)
   }
 }

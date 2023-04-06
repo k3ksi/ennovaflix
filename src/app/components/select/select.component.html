@@ -1,0 +1,6 @@
+<label for="idGenere">scegli genere: </label>
+
+<select name="genere" id="idGenere"  #select   (change)="onChange() ">
+  <option value="genere" selected disabled>genere</option>
+  <option *ngFor="let genere of generi" [value]="genere">{{ genere }}</option>
+</select>

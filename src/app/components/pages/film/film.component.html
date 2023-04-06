@@ -1,5 +1,9 @@
 <!-- test slider  da eliminare alla fine -->
 
+
+<app-select [generi]="generi" (cambioGenere)="GetFilbyGenere($event)" ></app-select>
+
+
 <h2> film recenti  </h2>
 <app-slider
 [SliderDati]="SliderDati">

@@ -11,7 +11,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "azione",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -22,7 +22,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "azione",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -33,7 +33,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "azione",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -44,7 +44,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "drammatico",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -55,7 +55,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "drammatico",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -66,7 +66,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "drammatico",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -77,7 +77,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "giallo",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -88,7 +88,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "giallo",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -99,7 +99,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "giallo",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -110,7 +110,7 @@ export class VideoService {
       "titolo": "titolo",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
-      "genere": "genere",
+      "genere": "giallo",
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png",
@@ -118,6 +118,8 @@ export class VideoService {
     },
 
   ];
+
+  generi: string[] = []
   constructor() { }
 
   // video
@@ -148,6 +150,16 @@ export class VideoService {
   // di tendenza
   getDiTendenzaSeriesTVVideos(): IResponseVideo[] {
     return this.dataTest;
+  }
+
+  getGeneri(): string[] {
+    this.dataTest.forEach(element => {
+      if (!this.generi.includes(element.genere)) {
+        this.generi.push(element.genere)
+      }
+    });
+
+    return this.generi
   }
 
 }
