@@ -2,24 +2,34 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 export type User = {
   username : string,
+  email: string,
   password : string,
-  urlImage : string
+  urlImage : string,
+  notifications : string
 }
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   user$ = new BehaviorSubject<User | null>(null);
+  fakeUser =
+    {
+      username: 'Andrea',
+      password: '1234',
+      urlImage: 'avatar1.svg',
+      email : 'test@ennovaflix.com',
+      notifications : 'basso'
+  }
   registerUser(user :User){
-    if(!this.searchUser(user.username).username){
+    if(!this.searchUser(user.email).email){
       localStorage.setItem('user', JSON.stringify(user));
     }
   }
-  searchUser(username : User['username']|null){
+  searchUser(email : User['email']|null){
     return JSON.parse(localStorage.getItem('user') ?? '{}')
   }
   loginUser(user :User){
-    const userFound:User = this.searchUser(user.username)
+    const userFound:User = this.searchUser(user.email)
     if(userFound){
       if(user.password === userFound.password){
         this.user$.next(userFound);

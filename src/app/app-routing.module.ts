@@ -8,10 +8,12 @@ import { FilmComponent } from './components/pages/film/film.component';
 import { SerieTvComponent } from './components/pages/serie-tv/serie-tv.component';
 import { SearchComponent } from './components/pages/search/search.component';
 import { PrefiritiComponent } from './components/pages/prefiriti/prefiriti.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', redirectTo:'' },
+  { path: 'profile',component:ProfilePageComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: 'home', redirectTo: 'homepage' },
   { path: 'film', component: FilmComponent },

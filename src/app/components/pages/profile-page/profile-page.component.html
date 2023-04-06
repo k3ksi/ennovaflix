@@ -1,0 +1,43 @@
+<div *ngIf="loggedUser() as user" class="for-image-figure">
+  <img src="/assets/{{user.urlImage}}" alt="immagine profilo" class="immagine_profilo">
+  <div class="dati" *ngIf="!modifica;else modificaTemplate">
+
+    <span >Username: {{user.username}}</span>
+    <span >Email: {{user.email}}</span>
+    <span>Notifiche: {{user.notifications}}</span>
+    <app-button (click)="modifica = !modifica" [text]="'Modifica Profilo'"></app-button>
+  </div>
+
+
+</div>
+
+<ng-template #modificaTemplate>
+  <form (submit)="$event.preventDefault()" [formGroup]="model">
+    <div class="margin">
+      Username <input id="username" type="text" formControlName="username"/>
+    </div>
+    <br>
+    <div class="margin">
+      Notifiche
+      <select #select>
+       <option *ngFor="let item of ['basso','medio','alto']" value="{{item}}">{{item}}</option>
+      </select>
+      <div>
+        Scegli una nuova immagine del profilo
+        <div class="radio" #radio>
+          <input type="radio" id="avatar1" name="avatar" value="avatar1.svg" (click)="urlImage = 'avatar1.svg'">
+          <label for="avatar1"><img src="/assets/avatar1.svg" alt=""></label>
+          <input type="radio" id="avatar2" name="avatar" value="avatar2.svg" (click)="urlImage = 'avatar2.svg'">
+          <label for="avatar2"><img src="/assets/avatar2.svg" alt=""></label>
+          <input type="radio" id="avatar3" name="avatar" value="avatar3.svg" (click)="urlImage = 'avatar3.svg'">
+          <label for="avatar3"><img src="/assets/avatar3.svg" alt=""></label>
+        </div>
+      </div>
+
+
+    </div>
+
+    <br>
+    <app-button (click)="updateProfile($event)" [text]="'Salva Modifiche'"></app-button>
+  </form>
+</ng-template>

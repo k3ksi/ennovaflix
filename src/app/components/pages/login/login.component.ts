@@ -5,7 +5,7 @@ import { AuthService, User } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
   auth = inject(AuthService);
@@ -26,23 +26,18 @@ export class LoginComponent {
     console.log(this.model.value.username, this.model.value.password);
   }
   register() {
-      const user: User = {
-        username: 'test@ennovaflix.com',
-        password: '1234',
-        urlImage: 'avatar1.svg'
-      }
-      this.auth.registerUser(user);
-    }
+    this.auth.registerUser(this.auth.fakeUser);
+  }
 
   login() {
     this.register();
-    if (this.model.value.username && this.model.value.password) {
-      const user: User = {
-        username: this.model.value.username,
-        password: this.model.value.password,
-        urlImage: 'avatar1.svg'
-      };
-      console.log(this.auth.loginUser(user), this.auth.user$.getValue());
+    if (
+      this.model.value.username &&
+      this.model.value.password &&
+      this.model.value.username === this.auth.fakeUser.email &&
+      this.model.value.password === this.auth.fakeUser.password
+    ) {
+      this.auth.loginUser(this.auth.fakeUser);
     }
   }
   search() {
@@ -50,10 +45,10 @@ export class LoginComponent {
       console.log(this.auth.searchUser(this.model.value.username));
     }
   }
-  loggedUser(){
+  loggedUser() {
     return this.auth.user$.getValue();
   }
-  constructor(){
-    this.register()
+  constructor() {
+    this.register();
   }
 }
