@@ -1,14 +1,18 @@
 <!-- test slider  da eliminare alla fine -->
 
-<h2> serie recenti  </h2>
-<app-slider
-[SliderDati]="SliderDati">
-</app-slider>
+<app-select
+  [generi]="generi"
+  (cambioGenere)="GetSerieTVByGenere($event)"
+></app-select>
 
-<br><br>
-<br><br>
 
-<h2> Di tendenza </h2>
-<app-slider
-[SliderDati]="SliderDati2">
-</app-slider>
+<h2>serie recenti</h2>
+<app-slider [isFilmOrSerieTV]="isSerieTv" [SliderDati]="SliderDati"> </app-slider>
+
+<br /><br />
+<br /><br />
+
+<ng-container *ngIf="!isFilter">
+  <h2>Di tendenza</h2>
+  <app-slider [isFilmOrSerieTV]="isSerieTv" [SliderDati]="SliderDati2"> </app-slider>
+</ng-container>

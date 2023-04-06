@@ -1,0 +1,7 @@
+<ul class="results">
+  <li *ngFor="let item of results.value">
+    <a [routerLink]="item.url">
+      <img [src]="item.urlImage" [alt]="'immagine di' + item.title" />
+    </a>
+  </li>
+</ul>

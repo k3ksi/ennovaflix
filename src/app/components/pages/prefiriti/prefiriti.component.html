@@ -1,13 +1,15 @@
 
-<h2> Preferiti  </h2>
+<h2> Preferiti film  </h2>
 <app-slider
+[isFilmOrSerieTV]="isFilm"
 [SliderDati]="SliderDati">
 </app-slider>
 
 <br><br>
 <br><br>
 
-<h2> Di tendenza </h2>
+<h2> Preferiti SerieTv </h2>
 <app-slider
+[isFilmOrSerieTV]="isSerieTv"
 [SliderDati]="SliderDati2">
 </app-slider>

@@ -11,6 +11,8 @@ export class PrefiritiComponent {
   private videoService = inject(VideoService);
   SliderDati!: IResponseVideo[]
   SliderDati2!: IResponseVideo[]
+  isFilm = "film"
+  isSerieTv = 'serietv'
 
   ngOnInit(): void {
     this.jsonFilmsData();

@@ -1,5 +1,5 @@
 <div *ngIf="loggedUser() as user" class="for-image-figure">
-  <img src="/assets/{{user.urlImage}}" alt="immagine profilo" class="immagine_profilo">
+  <img src="/assets/img/{{user.urlImage}}" alt="immagine profilo" class="immagine_profilo">
   <div class="dati" *ngIf="!modifica;else modificaTemplate">
 
     <span >Username: {{user.username}}</span>
@@ -26,11 +26,11 @@
         Scegli una nuova immagine del profilo
         <div class="radio" #radio>
           <input type="radio" id="avatar1" name="avatar" value="avatar1.svg" (click)="urlImage = 'avatar1.svg'">
-          <label for="avatar1"><img src="/assets/avatar1.svg" alt=""></label>
+          <label for="avatar1"><img src="/assets/img/avatar1.svg" alt="immagine avatar 1"></label>
           <input type="radio" id="avatar2" name="avatar" value="avatar2.svg" (click)="urlImage = 'avatar2.svg'">
-          <label for="avatar2"><img src="/assets/avatar2.svg" alt=""></label>
+          <label for="avatar2"><img src="/assets/img/avatar2.svg" alt="immagine avatar 2"></label>
           <input type="radio" id="avatar3" name="avatar" value="avatar3.svg" (click)="urlImage = 'avatar3.svg'">
-          <label for="avatar3"><img src="/assets/avatar3.svg" alt=""></label>
+          <label for="avatar3"><img src="/assets/img/avatar3.svg" alt="immagine avatar 3"></label>
         </div>
       </div>
 

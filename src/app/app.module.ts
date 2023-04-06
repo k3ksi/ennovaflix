@@ -16,6 +16,8 @@ import { VideoPageComponent } from './components/pages/video-page/video-page.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './components/pages/search/search.component';
 import { PrefiritiComponent } from './components/pages/prefiriti/prefiriti.component';
+import { ResultSearchComponent } from './components/result-search/result-search.component';
+import { SelectComponent } from './components/select/select.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 
 @NgModule({
@@ -33,6 +35,8 @@ import { ProfilePageComponent } from './components/pages/profile-page/profile-pa
     VideoPageComponent,
     SearchComponent,
     PrefiritiComponent,
+    ResultSearchComponent,
+    SelectComponent,
     ProfilePageComponent
   ],
   imports: [
