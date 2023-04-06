@@ -1,7 +1,7 @@
 
 <div class="container">
 <form *ngIf="!loggedUser();else homepage" (submit)="$event.preventDefault()" [formGroup]="model">
-  <label for="username">UserName: </label>
+  <label for="username">Email: </label>
   <input id="username" type="text" formControlName="username" autocomplete="email"/>
   <label for="password">Password: </label>
   <input id="password" type="password" formControlName="password" />

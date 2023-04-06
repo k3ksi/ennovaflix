@@ -16,6 +16,7 @@ import { VideoPageComponent } from './components/pages/video-page/video-page.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './components/pages/search/search.component';
 import { PrefiritiComponent } from './components/pages/prefiriti/prefiriti.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PrefiritiComponent } from './components/pages/prefiriti/prefiriti.compo
     ButtonComponent,
     VideoPageComponent,
     SearchComponent,
-    PrefiritiComponent
+    PrefiritiComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
