@@ -18,6 +18,7 @@ import { SearchComponent } from './components/pages/search/search.component';
 import { PrefiritiComponent } from './components/pages/prefiriti/prefiriti.component';
 import { ResultSearchComponent } from './components/result-search/result-search.component';
 import { SelectComponent } from './components/select/select.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SelectComponent } from './components/select/select.component';
     SearchComponent,
     PrefiritiComponent,
     ResultSearchComponent,
-    SelectComponent
+    SelectComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
