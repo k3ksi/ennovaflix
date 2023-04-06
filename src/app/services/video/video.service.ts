@@ -8,7 +8,7 @@ export class VideoService {
   dataTest: IResponseVideo[] = [
     {
       "id": 0,
-      "titolo": "titolo",
+      "titolo": "Jason Bourne",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "azione",
@@ -19,7 +19,7 @@ export class VideoService {
     },
     {
       "id": 1,
-      "titolo": "titolo",
+      "titolo": "Edge of Tomorrow",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "azione",
@@ -30,7 +30,7 @@ export class VideoService {
     },
     {
       "id": 2,
-      "titolo": "titolo",
+      "titolo": "point blank",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "azione",
@@ -41,7 +41,7 @@ export class VideoService {
     },
     {
       "id": 3,
-      "titolo": "titolo",
+      "titolo": "maxresdefault",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "drammatico",
@@ -52,7 +52,7 @@ export class VideoService {
     },
     {
       "id": 4,
-      "titolo": "titolo",
+      "titolo": "le pagine della nostra vita",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "drammatico",
@@ -63,7 +63,7 @@ export class VideoService {
     },
     {
       "id": 5,
-      "titolo": "titolo",
+      "titolo": "migliori film drammatici",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "drammatico",
@@ -74,7 +74,7 @@ export class VideoService {
     },
     {
       "id": 6,
-      "titolo": "titolo",
+      "titolo": "locandina casuale2 ",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "giallo",
@@ -85,7 +85,7 @@ export class VideoService {
     },
     {
       "id": 7,
-      "titolo": "titolo",
+      "titolo": "locandina",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "giallo",
@@ -96,7 +96,7 @@ export class VideoService {
     },
     {
       "id": 8,
-      "titolo": "titolo",
+      "titolo": "locandina2",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "giallo",
@@ -107,7 +107,7 @@ export class VideoService {
     },
     {
       "id": 9,
-      "titolo": "titolo",
+      "titolo": "mistero a crooker house",
       "annoDiUscita": 2019,
       "ratingMedio": 244.20,
       "genere": "giallo",

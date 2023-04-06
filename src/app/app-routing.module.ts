@@ -16,12 +16,17 @@ const routes: Routes = [
   { path: 'profile',component:ProfilePageComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: 'home', redirectTo: 'homepage' },
-  { path: 'film', component: FilmComponent },
-  { path: 'serietv', component: SerieTvComponent },
   { path: 'preferiti', component: PrefiritiComponent },
   { path: '', component: LoginComponent},
   { path: 'cerca', component: SearchComponent},
+  { path: 'film', component: FilmComponent },
   { path: 'film', children:[{
+    path: ':slug',
+    component: VideoPageComponent
+  }
+  ] },
+  { path: 'serietv', component: SerieTvComponent },
+  { path: 'serietv', children:[{
     path: ':slug',
     component: VideoPageComponent
   }
