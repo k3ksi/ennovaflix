@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoPageComponent } from './video-page.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ButtonComponent } from '../../button/button.component';
+import { RouterModule } from '@angular/router';
 
 describe('VideoPageComponent', () => {
   let component: VideoPageComponent;
@@ -8,7 +11,9 @@ describe('VideoPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VideoPageComponent ]
+      declarations: [ VideoPageComponent , ButtonComponent ],
+      imports: [RouterModule , RouterTestingModule]
+
     })
     .compileComponents();
 

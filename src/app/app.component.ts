@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ennovaflix';
+  titleAppComponent = 'ennovaflix app!';
 }
