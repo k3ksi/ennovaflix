@@ -1,6 +1,6 @@
 
 <h2> Film Preferiti </h2>
-<app-slider
+<app-slider class="slider"
 [isFilmOrSerieTV]="isFilm"
 [SliderDati]="SliderDati">
 </app-slider>
@@ -9,13 +9,13 @@
 <br><br>
 
 <h2> SerieTv Preferite</h2>
-<app-slider
+<app-slider class="slider"
 [isFilmOrSerieTV]="isSerieTv"
 [SliderDati]="SliderDati2">
 </app-slider>
 <div *ngIf="contenuti | async as contents" style="color:white">
   <h2> Tutti i preferiti dal DB </h2>
- <app-slider
+ <app-slider class="slider"
  [SliderDatiDb]="contents"
  [isFilmOrSerieTV]="''"
  ></app-slider>

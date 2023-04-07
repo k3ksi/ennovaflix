@@ -6,16 +6,16 @@
 ></app-select>
 
 <h2>Film Recenti</h2>
-<app-slider [isFilmOrSerieTV]="isFilm" [SliderDati]="SliderDati"> </app-slider>
+<app-slider class="slider" [isFilmOrSerieTV]="isFilm" [SliderDati]="SliderDati"> </app-slider>
 
 <br /><br />
 <br /><br />
 
 <ng-container *ngIf="!isFilter">
   <h2>Film Di Tendenza</h2>
-  <app-slider [isFilmOrSerieTV]="isFilm" [SliderDati]="SliderDati2"> </app-slider>
+  <app-slider class="slider" [isFilmOrSerieTV]="isFilm" [SliderDati]="SliderDati2"> </app-slider>
   <div *ngIf="contenuti | async as contents">
   <h2>Tutti i Film Dal DB</h2>
-  <app-slider [isFilmOrSerieTV]="isFilm" [SliderDatiDb]="contents"> </app-slider>
+  <app-slider class="slider" [isFilmOrSerieTV]="isFilm" [SliderDatiDb]="contents"> </app-slider>
   </div>
 </ng-container>
