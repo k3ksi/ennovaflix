@@ -12,7 +12,7 @@
 <br /><br />
 <br /><br />
 
-<ng-container *ngIf="!isFilter">
+<ng-container *ngIf="!(isFilter)">
   <h2>Serie Di Tendenza</h2>
   <app-slider [isFilmOrSerieTV]="isSerieTv" [SliderDati]="SliderDati2"> </app-slider>
   <div *ngIf="contenuti | async as contents">

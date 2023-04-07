@@ -1,6 +1,10 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilmComponent } from './film.component';
+import { SliderComponent } from '../../slider/slider.component';
+import { SelectComponent } from '../../select/select.component';
+import { RouterModule } from '@angular/router';
 
 describe('FilmComponent', () => {
   let component: FilmComponent;
@@ -8,9 +12,10 @@ describe('FilmComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilmComponent ]
+      declarations: [FilmComponent, SliderComponent, SelectComponent],
+      imports: [RouterModule , RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FilmComponent);
     component = fixture.componentInstance;

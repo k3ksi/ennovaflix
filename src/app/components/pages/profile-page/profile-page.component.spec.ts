@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfilePageComponent } from './profile-page.component';
+import { ButtonComponent } from '../../button/button.component';
 
 describe('ProfilePageComponent', () => {
   let component: ProfilePageComponent;
@@ -8,7 +9,7 @@ describe('ProfilePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfilePageComponent ]
+      declarations: [ ProfilePageComponent , ButtonComponent ]
     })
     .compileComponents();
 

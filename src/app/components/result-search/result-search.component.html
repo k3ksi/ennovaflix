@@ -1,4 +1,4 @@
-<ul class="results">
+<ul class="results" *ngIf="results">
   <li *ngFor="let item of results.value">
     <div *ngIf="item.isSerie; else isFilm">
       <a [routerLink]="'/serietv/' + item.id">
