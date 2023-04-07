@@ -1,7 +1,7 @@
 
 <header *ngIf="loggedUser() as user; else onlyLogo">
   <div>
-    <img class="logo" src="assets/img/logo.svg" alt="ennovaflix logo" />
+    <a routerLink="/homepage"><img class="logo" src="assets/img/logo.svg" alt="ennovaflix logo" /></a>
     <div >
       <button *ngFor="let item of links" routerLink="{{item.toLowerCase().replaceAll(' ','')}}">{{ item }}</button>
     </div>
