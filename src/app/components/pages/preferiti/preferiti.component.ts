@@ -3,11 +3,11 @@ import IResponseVideo from 'src/app/interfaces/IResponseVideo/iresponse-video';
 import { VideoService } from 'src/app/services/video/video.service';
 
 @Component({
-  selector: 'app-prefiriti',
-  templateUrl: './prefiriti.component.html',
-  styleUrls: ['./prefiriti.component.scss']
+  selector: 'app-preferiti',
+  templateUrl: './preferiti.component.html',
+  styleUrls: ['./preferiti.component.scss']
 })
-export class PrefiritiComponent {
+export class PreferitiComponent {
   private videoService = inject(VideoService);
   SliderDati!: IResponseVideo[]
   SliderDati2!: IResponseVideo[]

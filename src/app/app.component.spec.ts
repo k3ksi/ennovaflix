@@ -11,7 +11,7 @@ import { FilmComponent } from './components/pages/film/film.component';
 import { HomepageComponent } from './components/pages/homepage/homepage.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { NotfoundPageComponent } from './components/pages/notfound-page/notfound-page.component';
-import { PrefiritiComponent } from './components/pages/prefiriti/prefiriti.component';
+import { PreferitiComponent } from './components/pages/preferiti/preferiti.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 import { SearchComponent } from './components/pages/search/search.component';
 import { SerieTvComponent } from './components/pages/serie-tv/serie-tv.component';
@@ -38,7 +38,7 @@ describe('AppComponent', () => {
         ButtonComponent,
         VideoPageComponent,
         SearchComponent,
-        PrefiritiComponent,
+        PreferitiComponent,
         ResultSearchComponent,
         SelectComponent,
         ProfilePageComponent
