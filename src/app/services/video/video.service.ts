@@ -15,7 +15,7 @@ export class VideoService {
       "descrizione": "Text2Video-Zero Code and Weights Released by Picsart AI Research (12G VRAM)",
       "tipologia": "asdasd",
       "urlImage": "https://www.tuttotech.net/wp-content/uploads/2020/04/Jason-Bourne-top10.jpg",
-      "isSerie": false
+      "isSerie": true
     },
     {
       "id": 1,
@@ -163,6 +163,19 @@ export class VideoService {
     return this.generiFilms
   }
 
+  // ritorna un film in base all'id
+  getFilm(id: number): IResponseVideo {
+    return this.dataTest.filter((video) => video.id == id).reduce((element: IResponseVideo) => {
+      return element
+    })
+  }
+
+   // ritorna una serieTV in base all'id , ( fittizio prende lo stesso array dei film )
+   getSerieTV(id: number): IResponseVideo {
+    return this.dataTest.filter((video) => video.id == id).reduce((element: IResponseVideo) => {
+      return element
+    })
+  }
   // ritorna i film filtrati per genere
   getFilmsByGenere(options: { genere: string }): IResponseVideo[] {
     return this.dataTest.filter((video) => video.genere == options.genere);
