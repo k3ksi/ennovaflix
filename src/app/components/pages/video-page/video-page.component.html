@@ -3,14 +3,14 @@
     <video controls>
       <source src="assets/video/movie.mp4" type="video/mp4" />
     </video>
-    <div class="details">
-      <h3>{{ details.titolo }} - {{ details.anno }}</h3>
-      <span>{{ details.rating }} ★</span><app-button [text]="'Aggiungi ai preferiti'"></app-button>
+     <div class="details">
+      <h3>{{ details.titolo }} - {{ details.annoDiUscita }}</h3>
+      <span>{{ rating }} ★</span><app-button [text]="'Aggiungi ai preferiti'"></app-button>
       <hr />
       <div *ngIf="details.isSerie">
         <select (change)="onSelect(+val.value)" #val>
           <option selected="true" value="">Seleziona stagione</option>
-          <option *ngFor="let item of details.stagioni" value="{{item.numero_stagione}}" >{{item.numero_stagione}}</option>
+          <option *ngFor="let item of stagioni" value="{{item.numero_stagione}}" >{{item.numero_stagione}}</option>
         </select>
         <select *ngIf="puntate.length > 0">
           <option selected="true" disabled>Seleziona puntata</option>
@@ -20,7 +20,7 @@
         <hr>
       </div>
       <h4>Cast</h4>
-      <span *ngFor="let item of details.cast">{{ item }}, </span>
+      <span *ngFor="let item of cast">{{ item }}, </span>
       <span>...</span>
       <hr />
       <h4>Descrizione</h4>
@@ -34,7 +34,7 @@
       <app-button (click)="write = true" class="add" [text]="'+'"></app-button>
     </div>
 
-    <div *ngFor="let item of details.recensioni">
+    <div *ngFor="let item of recenzioni">
       <h4>{{ item.nickname }} - {{ item.rating }}★</h4>
       <p>{{ item.descrizione }}</p>
     </div>
