@@ -67,10 +67,13 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ennovaflix');
   });
 
+  /*
+  non ci serve il titolo perche usiamo il logo
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('ennovaflix app!');
   });
+  */
 });
