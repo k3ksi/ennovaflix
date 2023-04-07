@@ -13,7 +13,7 @@ export class PrefiritiComponent {
   SliderDati2!: IResponseVideo[]
   isFilm = "film"
   isSerieTv = 'serietv'
-
+  contenuti = this.videoService.getAllPreferiti()
   ngOnInit(): void {
     this.jsonFilmsData();
     this.jsonPreferitiDiTendezaData();

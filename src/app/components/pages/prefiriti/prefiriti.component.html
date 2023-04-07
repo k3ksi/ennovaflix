@@ -13,3 +13,10 @@
 [isFilmOrSerieTV]="isSerieTv"
 [SliderDati]="SliderDati2">
 </app-slider>
+<div *ngIf="contenuti | async as contents" style="color:white">
+  <h2> Tutti i preferiti dal DB </h2>
+ <app-slider
+ [SliderDatiDb]="contents"
+ [isFilmOrSerieTV]="''"
+ ></app-slider>
+</div>
