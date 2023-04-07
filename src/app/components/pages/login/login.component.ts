@@ -52,7 +52,7 @@ export class LoginComponent {
   constructor(private router: Router) {
     this.register();
   }
-  redirect(){
+  redirect() {
     this.router.navigate(['/homepage']);
   }
 }

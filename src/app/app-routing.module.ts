@@ -12,30 +12,38 @@ import { ProfilePageComponent } from './components/pages/profile-page/profile-pa
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'login', redirectTo:'' },
-  { path: 'profile',component:ProfilePageComponent },
+  { path: 'login', redirectTo: '' },
+  { path: 'profile', component: ProfilePageComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: 'home', redirectTo: 'homepage' },
   { path: 'preferiti', component: PreferitiComponent },
-  { path: '', component: LoginComponent},
-  { path: 'cerca', component: SearchComponent},
+  { path: '', component: LoginComponent },
+  { path: 'cerca', component: SearchComponent },
   { path: 'film', component: FilmComponent },
-  { path: 'film', children:[{
-    path: ':slug',
-    component: VideoPageComponent
-  }
-  ] },
+  {
+    path: 'film',
+    children: [
+      {
+        path: ':slug',
+        component: VideoPageComponent,
+      },
+    ],
+  },
   { path: 'serietv', component: SerieTvComponent },
-  { path: 'serietv', children:[{
-    path: ':slug',
-    component: VideoPageComponent
-  }
-  ] },
+  {
+    path: 'serietv',
+    children: [
+      {
+        path: ':slug',
+        component: VideoPageComponent,
+      },
+    ],
+  },
   { path: '**', component: NotfoundPageComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

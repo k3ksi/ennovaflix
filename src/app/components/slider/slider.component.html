@@ -8,8 +8,18 @@
 <ng-template #db>
   <ul class="results">
     <li *ngFor="let video of SliderDatiDb">
-      <a [routerLink]="'/' + video.categoria.nome.toLowerCase().replace(' ', '') + '/' + video.id">
-        <img [src]="'/assets/img/'+video.copertina" [alt]="'immagine di ' + video.titolo" />
+      <a
+        [routerLink]="
+          '/' +
+          video.categoria.nome.toLowerCase().replace(' ', '') +
+          '/' +
+          video.id
+        "
+      >
+        <img
+          [src]="'/assets/img/' + video.copertina"
+          [alt]="'immagine di ' + video.titolo"
+        />
       </a>
     </li>
   </ul>

@@ -11,10 +11,9 @@ describe('PrefiritiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PreferitiComponent , SliderComponent ],
-      imports : [ RouterModule , RouterTestingModule] ,
-    })
-    .compileComponents();
+      declarations: [PreferitiComponent, SliderComponent],
+      imports: [RouterModule, RouterTestingModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PreferitiComponent);
     component = fixture.componentInstance;

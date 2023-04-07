@@ -1,12 +1,24 @@
-
 <header *ngIf="loggedUser() as user; else onlyLogo">
   <div>
-    <a routerLink="/homepage"><img class="logo" src="assets/img/logo.svg" alt="ennovaflix logo" /></a>
-    <div >
-      <button *ngFor="let item of links" routerLink="{{item.toLowerCase().replaceAll(' ','')}}">{{ item }}</button>
+    <a routerLink="/homepage"
+      ><img class="logo" src="assets/img/logo.svg" alt="ennovaflix logo"
+    /></a>
+    <div>
+      <button
+        *ngFor="let item of links"
+        routerLink="{{ item.toLowerCase().replaceAll(' ', '') }}"
+      >
+        {{ item }}
+      </button>
     </div>
     <a (click)="modal = !modal">
-      <div><img class="userLogo" src="assets/img/{{user.urlImage}}" alt="user logo" />▼</div>
+      <div>
+        <img
+          class="userLogo"
+          src="assets/img/{{ user.urlImage }}"
+          alt="user logo"
+        />▼
+      </div>
       <div class="menu" *ngIf="modal">
         <a routerLink="/profile">Profilo</a>
         <a (click)="logoutUser()" routerLink="/">Logout</a>

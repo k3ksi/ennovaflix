@@ -3,21 +3,27 @@
     <video controls>
       <source src="assets/video/movie.mp4" type="video/mp4" />
     </video>
-     <div class="details" *ngIf="details">
+    <div class="details" *ngIf="details">
       <h3>{{ details.titolo }} - {{ details.annoDiUscita }}</h3>
-      <span>{{ rating }} ★</span><app-button [text]="'Aggiungi ai preferiti'"></app-button>
+      <span>{{ rating }} ★</span
+      ><app-button [text]="'Aggiungi ai preferiti'"></app-button>
       <hr />
       <div *ngIf="details.isSerie">
         <select (change)="onSelect(+val.value)" #val>
           <option selected="true" value="">Seleziona stagione</option>
-          <option *ngFor="let item of stagioni" value="{{item.numero_stagione}}" >{{item.numero_stagione}}</option>
+          <option
+            *ngFor="let item of stagioni"
+            value="{{ item.numero_stagione }}"
+          >
+            {{ item.numero_stagione }}
+          </option>
         </select>
         <select *ngIf="puntate.length > 0">
           <option selected="true" disabled>Seleziona puntata</option>
-          <option *ngFor="let item of puntate">{{item}}</option>
+          <option *ngFor="let item of puntate">{{ item }}</option>
         </select>
 
-        <hr>
+        <hr />
       </div>
       <h4>Cast</h4>
       <span *ngFor="let item of cast">{{ item }}, </span>
@@ -45,12 +51,23 @@
     <h3>Aggiungi Recensione</h3>
     <div class="rating">
       Voto :
-      <label *ngFor="let i of [1,2,3,4,5]"><input  [value]="i" name="rating" type="radio" (click)="ratingValue=i">{{i}}</label>
+      <label *ngFor="let i of [1, 2, 3, 4, 5]"
+        ><input
+          [value]="i"
+          name="rating"
+          type="radio"
+          (click)="ratingValue = i"
+        />{{ i }}</label
+      >
     </div>
-    <div *ngIf="ratingValue > 0" class="stars">{{ratingValue}}★</div>
+    <div *ngIf="ratingValue > 0" class="stars">{{ ratingValue }}★</div>
     <form class="addRecensione">
       <textarea name="recensione" cols="5" rows="5"></textarea>
-      <app-button (click)="write = false" class="add" [text]="'Pubblica'"></app-button>
+      <app-button
+        (click)="write = false"
+        class="add"
+        [text]="'Pubblica'"
+      ></app-button>
     </form>
   </div>
 </ng-template>

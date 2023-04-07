@@ -1,25 +1,25 @@
 <!-- test slider  da eliminare alla fine -->
 
-<h2> Film </h2>
-<app-slider class="slider"
-[isFilmOrSerieTV]="isFilm"
-[SliderDati]="SliderDati">
+<h2>Film</h2>
+<app-slider class="slider" [isFilmOrSerieTV]="isFilm" [SliderDati]="SliderDati">
 </app-slider>
 
-<br><br>
-<br><br>
+<br /><br />
+<br /><br />
 
-<h2> Serie Tv </h2>
-<app-slider class="slider"
-[isFilmOrSerieTV]="isSerieTv"
-[SliderDati]="SliderDati2">
+<h2>Serie Tv</h2>
+<app-slider
+  class="slider"
+  [isFilmOrSerieTV]="isSerieTv"
+  [SliderDati]="SliderDati2"
+>
 </app-slider>
 
-
-<div *ngIf="contenuti | async as contents" style="color:white">
-  <h2> Tutti i contenuti dal DB </h2>
- <app-slider class="slider"
- [SliderDatiDb]="contents"
- [isFilmOrSerieTV]="''"
- ></app-slider>
+<div *ngIf="contenuti | async as contents" style="color: white">
+  <h2>Tutti i contenuti dal DB</h2>
+  <app-slider
+    class="slider"
+    [SliderDatiDb]="contents"
+    [isFilmOrSerieTV]="''"
+  ></app-slider>
 </div>
