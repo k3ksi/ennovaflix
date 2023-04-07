@@ -8,6 +8,6 @@
   <app-button [link]="'/'" [text]="'Log In'" (click)="login()"></app-button>
 </form>
 <ng-template #homepage>
-  <div style="color:white">richiamo componente homepage   {{loggedUser()?.username}}</div>
+  {{redirect()}}
 </ng-template>
 </div>
