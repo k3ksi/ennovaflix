@@ -24,7 +24,14 @@ import { RouterLink, RouterModule } from '@angular/router';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-
+      imports: [
+        RouterTestingModule,
+        RouterModule,
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+      ],
       declarations: [
         AppComponent,
         NotfoundPageComponent,
@@ -43,15 +50,7 @@ describe('AppComponent', () => {
         SelectComponent,
         ProfilePageComponent
       ],
-      imports: [
-        RouterTestingModule,
-        RouterModule,
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        ReactiveFormsModule
 
-      ],
     }).compileComponents();
   });
 
