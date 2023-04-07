@@ -5,4 +5,16 @@ h2{
   font-family: 'Courier New', Courier, monospace;
   font-size:2rem;
 }
-
+.slider{
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+ }
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+   }
+   to
+   {
+     opacity: 1;
+   }
+ }
