@@ -5,13 +5,13 @@
   (cambioGenere)="GetFilmbyGenere($event)"
 ></app-select>
 
-<h2>film recenti</h2>
+<h2>Film Recenti</h2>
 <app-slider [isFilmOrSerieTV]="isFilm" [SliderDati]="SliderDati"> </app-slider>
 
 <br /><br />
 <br /><br />
 
 <ng-container *ngIf="!isFilter">
-  <h2>Di tendenza</h2>
+  <h2>Film Di Tendenza</h2>
   <app-slider [isFilmOrSerieTV]="isFilm" [SliderDati]="SliderDati2"> </app-slider>
 </ng-container>
