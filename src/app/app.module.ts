@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotfoundPageComponent } from './components/pages/notfound-page/notfound-page.component';
@@ -43,7 +43,8 @@ import { ProfilePageComponent } from './components/pages/profile-page/profile-pa
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

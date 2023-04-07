@@ -1,7 +1,16 @@
-<ul class="results">
+<ul class="results" *ngIf="!SliderDatiDb; else db">
   <li *ngFor="let video of SliderDati">
     <a [routerLink]="'/' + isFilmOrSerieTV + '/' + video.id">
       <img [src]="video.urlImage" [alt]="'immagine di ' + video.titolo" />
     </a>
   </li>
 </ul>
+<ng-template #db>
+  <ul class="results">
+    <li *ngFor="let video of SliderDatiDb">
+      <a [routerLink]="'/' + video.categoria.nome.toLowerCase().replace(' ', '') + '/' + video.id">
+        <img [src]="'/assets/img/'+video.copertina" [alt]="'immagine di ' + video.titolo" />
+      </a>
+    </li>
+  </ul>
+</ng-template>

@@ -12,6 +12,7 @@ export class SerieTvComponent {
   private videoService = inject(VideoService);
   SliderDati!: IResponseVideo[]
   SliderDati2!: IResponseVideo[]
+  contenuti=this.videoService.getAllSerie()
   generi!: string[]
   isFilter = false;
   isSerieTv = 'serietv'

@@ -8,16 +8,16 @@ import { VideoService } from 'src/app/services/video/video.service';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
-
   private videoService = inject(VideoService);
   SliderDati!: IResponseVideo[]
   SliderDati2!: IResponseVideo[]
   isFilm = "film"
   isSerieTv = 'serietv'
-
+  contenuti = this.videoService.getAllContenuti();
   ngOnInit(): void {
     this.jsonFilmData();
     this.jsonSeriesTvData();
+
   }
   jsonFilmData() {
     this.SliderDati = this.videoService.getFilmsVideos();

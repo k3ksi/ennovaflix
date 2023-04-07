@@ -1,10 +1,47 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import IResponseVideo from 'src/app/interfaces/IResponseVideo/iresponse-video';
+import { HttpClient } from '@angular/common/http';
+import { tap, toArray } from 'rxjs';
+export type Contenuti = Contenuto[]
 
+export interface Contenuto {
+  id: number
+  titolo: string
+  copertina: string
+  descrizione: string
+  trailer: string
+  categoria: Categoria
+  anno_uscita: number
+  attori: string
+  regia: string
+  generi: Generi[]
+  utenti: Utenti[]
+}
+
+export interface Categoria {
+  id: number
+  nome: string
+}
+
+export interface Generi {
+  id: number
+  nome: string
+}
+
+export interface Utenti {
+  id: number
+  nome: string
+  cognome: string
+  username: string
+  email: string
+  avatar: string
+  password: string
+}
 @Injectable({
   providedIn: 'root'
 })
 export class VideoService {
+  private http = inject(HttpClient);
   dataTest: IResponseVideo[] = [
     {
       "id": 0,
@@ -207,5 +244,25 @@ export class VideoService {
 
     return this.generiFilms
   }
-
+  url = "http://localhost:8080/"
+  getAllContenuti(){
+    return this.http.get(this.url+'contenuto/getAll').pipe<Contenuti>(
+      tap(console.log)
+    )
+  }
+  getAllFilms(){
+    return this.http.get(this.url+'contenuto/getcategoriaid/1').pipe<Contenuti>(
+      tap(console.log)
+    )
+  }
+  getAllSerie(){
+    return this.http.get(this.url+'contenuto/getcategoriaid/2').pipe<Contenuti>(
+      tap(console.log)
+    )
+  }
+  getAllPreferiti(){
+    return this.http.get(this.url+'contenuto/getcontenutiutenti/1').pipe<Contenuti>(
+      tap(console.log)
+    )
+  }
 }

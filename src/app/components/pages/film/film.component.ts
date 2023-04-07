@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import IResponseVideo from 'src/app/interfaces/IResponseVideo/iresponse-video';
-import { VideoService } from 'src/app/services/video/video.service';
+import { Contenuti, VideoService } from 'src/app/services/video/video.service';
 
 @Component({
   selector: 'app-film',
@@ -13,6 +13,7 @@ export class FilmComponent {
   private videoService = inject(VideoService);
   SliderDati!: IResponseVideo[]
   SliderDati2!: IResponseVideo[]
+  contenuti = this.videoService.getAllFilms();
   generi!: string[]
   isFilter : boolean = false;
   isFilm = "film"
