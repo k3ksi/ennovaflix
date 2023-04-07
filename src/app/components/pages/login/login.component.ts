@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService, User } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -48,7 +49,10 @@ export class LoginComponent {
   loggedUser() {
     return this.auth.user$.getValue();
   }
-  constructor() {
+  constructor(private router: Router) {
     this.register();
+  }
+  redirect(){
+    this.router.navigate(['/homepage']);
   }
 }
