@@ -50,7 +50,6 @@ describe('AppComponent', () => {
         SelectComponent,
         ProfilePageComponent
       ],
-
     }).compileComponents();
   });
 
